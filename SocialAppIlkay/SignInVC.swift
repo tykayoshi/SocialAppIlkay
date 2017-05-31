@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -19,12 +20,18 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Check if user exists in Firebase to auto push them to the social feed, so they dont have to log in every time
+        //Even if user deletes app it will remember
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("ILKAY: KEY ID \(KEY_UID)")
+            performSegue(withIdentifier: "showSocialFeed", sender: nil)
+        }
     }
+    
 
     @IBAction func facebookButtonTapped(_ sender: Any) {
         
@@ -67,6 +74,11 @@ class SignInVC: UIViewController {
                 print("ILKAY: THIS DIDNT WORK FIREBASE - \(error)")
             } else {
                 print("ILKAY: WE ARE IN FIREBASE")
+                //Save UID to keychain
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
+                
             }
         })
         
@@ -82,18 +94,32 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("ILKAY: EMAIL USER AUTHENTICATED, CAN LOG IN")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("ILKAY: Unable to create user using email \(error)")
                         } else {
                             print("ILLAY: EMAIL USER CREATED, CAN LOG IN")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
         
+    }
+    
+    
+    //Add to keychain
+    func completeSignIn(id: String) {
+       let saveSuccess = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("ILKAY: DATA SAVED TO KEYCHAIN - \(saveSuccess)")
+        performSegue(withIdentifier: "showSocialFeed", sender: nil)
     }
 
 }
