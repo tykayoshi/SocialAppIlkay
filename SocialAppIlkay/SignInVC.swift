@@ -13,6 +13,9 @@ import FBSDKLoginKit
 
 class SignInVC: UIViewController {
 
+    @IBOutlet var emailText: CustomTextTest!
+    @IBOutlet var passwordText: CustomTextTest!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -66,6 +69,30 @@ class SignInVC: UIViewController {
                 print("ILKAY: WE ARE IN FIREBASE")
             }
         })
+        
+    }
+    
+    
+    //New user and create the details OR existing user and correct
+    @IBAction func signInTapped(_ sender: Any) {
+        //Add an alert view at some point
+        //Check that the fields arent empty
+        if let email = emailText.text, let password = passwordText.text {
+            
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                    print("ILKAY: EMAIL USER AUTHENTICATED, CAN LOG IN")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("ILKAY: Unable to create user using email \(error)")
+                        } else {
+                            print("ILLAY: EMAIL USER CREATED, CAN LOG IN")
+                        }
+                    })
+                }
+            })
+        }
         
     }
 

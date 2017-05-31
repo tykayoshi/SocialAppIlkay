@@ -94,13 +94,16 @@
                                         <rect key="frame" x="0.0" y="45" width="283" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaH-Ik-Wsv" customClass="CustomSignInText" customModule="SocialAppIlkay" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="283" height="34"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwg-Um-FGZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -124,6 +127,10 @@
                             <constraint firstItem="AdH-ne-7bl" firstAttribute="top" secondItem="CYq-9F-hVF" secondAttribute="bottom" constant="8" id="xyy-F0-6K9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailText" destination="sfH-Q9-crC" id="KtH-7I-3xP"/>
+                        <outlet property="passwordText" destination="dEe-6Z-hTg" id="qTS-8S-6QJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
