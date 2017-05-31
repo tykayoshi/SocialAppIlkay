@@ -118,7 +118,7 @@ class SignInVC: UIViewController {
     //Add to keychain
     func completeSignIn(id: String) {
        let saveSuccess = KeychainWrapper.standard.set(id, forKey: KEY_UID)
-        print("ILKAY: DATA SAVED TO KEYCHAIN - \(saveSuccess)")
+        print("ILKAY: DATA SAVED TO KEYCHAIN - \(saveSuccess) - \(id)")
         performSegue(withIdentifier: "showSocialFeed", sender: nil)
     }
 

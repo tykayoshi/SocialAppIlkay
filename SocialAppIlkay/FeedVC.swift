@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class FeedVC: UIViewController {
 
@@ -21,15 +23,11 @@ class FeedVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signOutTapped(_ sender: Any) {
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        print("ILKAY: ID REMOVED - \(keychainResult)")
+        try! FIRAuth.auth()?.signOut()
+        performSegue(withIdentifier: "showSignIn", sender: nil)
     }
-    */
 
 }
