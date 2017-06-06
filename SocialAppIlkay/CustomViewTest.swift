@@ -23,6 +23,9 @@ class CustomViewTest: UIView {
         layer.shadowRadius = 5.0
         //How far out of the bounds before it applies and ends. Hard to explain
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        
+        //Make circular corners
+        layer.cornerRadius = 2.0
     }
 
 
