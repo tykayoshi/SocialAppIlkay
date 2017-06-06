@@ -151,16 +151,69 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-Nt-p4W" customClass="CustomViewTest" customModule="SocialAppIlkay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-8D-oU7">
+                                        <rect key="frame" x="8" y="14" width="43" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="43" id="Oda-jh-8gH"/>
+                                            <constraint firstAttribute="height" constant="36" id="aKn-j3-Wfd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFq-p5-LPF">
+                                        <rect key="frame" x="104" y="22" width="166" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="iFq-p5-LPF" firstAttribute="leading" secondItem="dAe-8D-oU7" secondAttribute="trailing" constant="53" id="Hkf-cr-vay"/>
+                                    <constraint firstItem="iFq-p5-LPF" firstAttribute="top" secondItem="mU2-Nt-p4W" secondAttribute="top" constant="22" id="OVn-2H-fNn"/>
+                                    <constraint firstItem="dAe-8D-oU7" firstAttribute="leading" secondItem="mU2-Nt-p4W" secondAttribute="leading" constant="8" id="Xxn-Pg-yTJ"/>
+                                    <constraint firstItem="iFq-p5-LPF" firstAttribute="centerX" secondItem="mU2-Nt-p4W" secondAttribute="centerX" id="c2c-PM-Zbj"/>
                                     <constraint firstAttribute="height" constant="65" id="gVF-wF-Qkm"/>
+                                    <constraint firstItem="dAe-8D-oU7" firstAttribute="top" secondItem="mU2-Nt-p4W" secondAttribute="top" constant="14" id="pgw-hf-rnL"/>
+                                    <constraint firstItem="iFq-p5-LPF" firstAttribute="centerY" secondItem="dAe-8D-oU7" secondAttribute="centerY" id="s31-1X-oWw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-Oc-Uyp" customClass="CustomViewTest" customModule="SocialAppIlkay" customModuleProvider="target">
                                 <rect key="frame" x="16" y="73" width="343" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-h4-Psg">
+                                        <rect key="frame" x="8" y="4" width="327" height="49"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="GW4-NY-rZ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="2bb-m0-wjB"/>
+                                                    <constraint firstAttribute="height" constant="49" id="99R-w2-ctk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-Xk-KnP" customClass="CustomTextTest" customModule="SocialAppIlkay" customModuleProvider="target">
+                                                <rect key="frame" x="49" y="0.0" width="232" height="49"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fda-66-79H" customClass="RoundButton" customModule="SocialAppIlkay" customModuleProvider="target">
+                                                <rect key="frame" x="281" y="0.0" width="46" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="GyX-Pa-xt5"/>
+                                                    <constraint firstAttribute="width" constant="46" id="qqD-eg-DvK"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="add-post"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hTr-h4-Psg" secondAttribute="trailing" constant="8" id="1hx-Qs-PIS"/>
+                                    <constraint firstItem="hTr-h4-Psg" firstAttribute="leading" secondItem="sLY-Oc-Uyp" secondAttribute="leading" constant="8" id="4y8-Kf-7G1"/>
+                                    <constraint firstItem="hTr-h4-Psg" firstAttribute="top" secondItem="sLY-Oc-Uyp" secondAttribute="top" constant="4" id="6za-Fh-OOC"/>
                                     <constraint firstAttribute="height" constant="65" id="j32-f0-ys4"/>
+                                    <constraint firstAttribute="bottom" secondItem="hTr-h4-Psg" secondAttribute="bottom" constant="12" id="uL0-rD-oGH"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="328" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YLO-6j-iTV">
@@ -174,13 +227,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-SZ-d7M">
-                                                    <rect key="frame" x="16" y="16" width="343" height="295.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-SZ-d7M" customClass="CustomViewTest" customModule="SocialAppIlkay" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="16" width="343" height="296"/>
                                                     <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Pmi-SZ-d7M" secondAttribute="bottom" constant="16" id="2F2-Wb-Tbx"/>
+                                                <constraint firstItem="Pmi-SZ-d7M" firstAttribute="centerY" secondItem="bZd-Rz-c1f" secondAttribute="centerY" id="DVX-kF-W8S"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pmi-SZ-d7M" secondAttribute="trailing" constant="16" id="ErA-WW-xmM"/>
                                                 <constraint firstItem="Pmi-SZ-d7M" firstAttribute="leading" secondItem="bZd-Rz-c1f" secondAttribute="leading" constant="16" id="kaU-27-bOQ"/>
                                                 <constraint firstItem="Pmi-SZ-d7M" firstAttribute="top" secondItem="bZd-Rz-c1f" secondAttribute="top" constant="16" id="qSi-8T-sM7"/>
@@ -210,10 +264,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keY-zH-Xw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880.79999999999995" y="123.68815592203899"/>
+            <point key="canvasLocation" x="884" y="123.68815592203899"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add-image" width="88" height="88"/>
+        <image name="add-post" width="88" height="88"/>
         <image name="f" width="352" height="328"/>
+        <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>
