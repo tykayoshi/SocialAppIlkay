@@ -312,6 +312,13 @@
                                                 <constraint firstItem="Pmi-SZ-d7M" firstAttribute="leading" secondItem="bZd-Rz-c1f" secondAttribute="leading" constant="16" id="kaU-27-bOQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="vy2-pw-bZd" id="psJ-HP-z51"/>
+                                            <outlet property="numberOfLikesLbl" destination="Dy6-0c-ijw" id="95A-BS-rXZ"/>
+                                            <outlet property="postImg" destination="xOV-dn-j33" id="kGQ-A6-3jJ"/>
+                                            <outlet property="profileImg" destination="dch-PS-p9e" id="oQR-fP-mNe"/>
+                                            <outlet property="usernameLbl" destination="neJ-2z-Quj" id="AEd-eV-f3o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
