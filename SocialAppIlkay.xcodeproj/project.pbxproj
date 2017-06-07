@@ -20,6 +20,7 @@
 		B664E7841ED482CC0070F4E6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E7831ED482CC0070F4E6 /* RoundButton.swift */; };
 		B664E7861ED4844A0070F4E6 /* CustomTextTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E7851ED4844A0070F4E6 /* CustomTextTest.swift */; };
 		B664E7881ED4857A0070F4E6 /* CustomSignInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E7871ED4857A0070F4E6 /* CustomSignInText.swift */; };
+		B6E881381EE8308F00078115 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E881371EE8308F00078115 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B664E7831ED482CC0070F4E6 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B664E7851ED4844A0070F4E6 /* CustomTextTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextTest.swift; sourceTree = "<group>"; };
 		B664E7871ED4857A0070F4E6 /* CustomSignInText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSignInText.swift; sourceTree = "<group>"; };
+		B6E881371EE8308F00078115 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		F658C0897B7A99C07AA82719 /* Pods-SocialAppIlkay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppIlkay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialAppIlkay/Pods-SocialAppIlkay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				B664E7831ED482CC0070F4E6 /* RoundButton.swift */,
 				B664E7851ED4844A0070F4E6 /* CustomTextTest.swift */,
 				B664E7871ED4857A0070F4E6 /* CustomSignInText.swift */,
+				B6E881371EE8308F00078115 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				B664E7681ED46C0D0070F4E6 /* AppDelegate.swift in Sources */,
 				B664E77F1ED480A30070F4E6 /* CustomViewTest.swift in Sources */,
 				B6526C6A1EDF0E8200A02B37 /* FeedVC.swift in Sources */,
+				B6E881381EE8308F00078115 /* PostCell.swift in Sources */,
 				B664E7881ED4857A0070F4E6 /* CustomSignInText.swift in Sources */,
 				B664E7821ED481280070F4E6 /* Constants.swift in Sources */,
 				B664E7861ED4844A0070F4E6 /* CustomTextTest.swift in Sources */,
